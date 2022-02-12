@@ -1,0 +1,44 @@
+
+@mixin dimensions($h, $w) {
+    height: $h;
+    width: $w;
+}
+
+.parent{
+    display: flex;
+    justify-content: center;
+    padding-top: 3%;
+}
+
+.image1, .combined{ 
+    position: absolute;
+}
+
+.image4{
+    position: absolute;
+    left: 450px;
+    top: 30px;
+}
+
+.image5{
+    @extend .image4;
+    top: 120px;
+}
+
+.Viewappbtn{
+    @extend .image4;
+    @include dimensions(44px, 133px);
+    background-color: black;
+    color: white;
+    top: 75px;
+    left: 1050px;
+    border-radius: 20%;
+}
+
+#h1{
+    text-align: left;
+    padding: 2%;
+}
+
+
+
